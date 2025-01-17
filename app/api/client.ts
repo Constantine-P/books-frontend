@@ -6,10 +6,12 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
+  const token =
+    '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';
   return {
     headers: {
       ...headers,
-      authorization: `Bearer ${import.meta.env.VITE_AUTH_TOKEN}`,
+      authorization: `Bearer ${token}`,
     },
   };
 });
