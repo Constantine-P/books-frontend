@@ -9,6 +9,10 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import { fileURLToPath } from 'url';
 
 export default defineConfig({
+  build: {
+    modulePreload: false,
+    assetsDir: '',
+  },
   css: {
     postcss: {
       plugins: [tailwindcss, autoprefixer],

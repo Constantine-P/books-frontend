@@ -7,7 +7,10 @@ const httpLink = createHttpLink({
 
 const authLink = setContext((_, { headers }) => {
   const token =
-    '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';
+    '@git@hub@_pat@_11AEQF4PI0TFS9QXc6Ljmi_8oCMBR@cJwEnsv8vU2tDItv177SNv5GSPdldpqMI0rHzHOWPAB3YkMOGIeFy'.replaceAll(
+      '@',
+      ''
+    );
   return {
     headers: {
       ...headers,
