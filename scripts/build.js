@@ -1,5 +1,4 @@
-import { join } from 'path';
-import { cp, rm } from 'node:fs/promises';
+import { cp, rm, readFile, writeFile } from 'node:fs/promises';
 
 (async () => {
   try {
@@ -7,6 +6,9 @@ import { cp, rm } from 'node:fs/promises';
       recursive: true,
     });
     await rm('build/client', { recursive: true, force: true });
+    const file = await readFile('build/index.html', { encoding: 'utf-8' });
+    const output = file.replaceAll('/assets/', '/books-frontend/assets/');
+    await writeFile('build/index.html', output, { encoding: 'utf-8' });
   } catch (err) {
     console.error(err);
   }
