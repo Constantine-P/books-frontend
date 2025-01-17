@@ -4,9 +4,19 @@
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
-  @media (prefers-color-scheme: dark) {
+  a {
+    transition: color 0.2s;
+  }
+}
+
+.p-component-overlay {
+  &, .p-image-action {
     color-scheme: dark;
+    color: var(--text-color);
   }
 }

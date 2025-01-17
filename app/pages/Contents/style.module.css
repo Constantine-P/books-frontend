@@ -1,0 +1,19 @@
+.contents {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  max-width: 984px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 1rem;
+  background-color: var(--surface-0);
+}
+
+.title {
+  padding-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-bottom: 2px solid var(--surface-border);
+}

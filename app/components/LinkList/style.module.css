@@ -1,0 +1,74 @@
+.LinkList {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.levelOne {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+}
+
+.onlyOneLevel {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+
+  .levelOneLink {
+    font-weight: normal;
+  }
+}
+
+.levelTwo {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.levelOneLink {
+  font-weight: bold;
+
+  &:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+}
+
+.levelTwoLink {
+  color: var(--indigo-300);
+
+  &:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+}
+
+.numericMarker {
+  margin-right: 0.5rem;
+  width: 2rem;
+  display: inline-block;
+}
+
+.dotMarker {
+  display: inline-block;
+  margin-right: 1rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: var(--text-color);
+}

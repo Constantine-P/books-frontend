@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  align-items: center;
+  flex: 0;
+  gap: 0.5rem;
+  background-color: var(--surface-e);
+  border-bottom: 3px solid var(--surface-border);
+  font-size: 1.3rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  padding: 0.5rem 1rem;
+  display: block;
+  font-size: 1.4rem;
+  transform: rotate(180deg);
+}
+
+.themeButton {
+  margin: 1rem 1rem 1rem auto;
+
+  &:focus {
+    box-shadow: none;
+  }
+}

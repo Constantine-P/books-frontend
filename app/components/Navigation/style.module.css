@@ -1,0 +1,52 @@
+.navigation {
+  display: flex;
+  align-items: flex-start;
+  transition: 0.2s width linear;
+  position: relative;
+  width: 250px;
+  height: 100%;
+  flex: 1;
+}
+
+.button {
+  margin: 0.5rem;
+  padding: 0.2rem;
+  position: absolute;
+  left: 100%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+.navigationInner {
+  padding: 2rem 1rem;
+  height: calc(100% + 70px);
+  width: 250px;
+  flex-shrink: 0;
+  background-color: var(--surface-a);
+  border-right: 1px solid var(--surface-border);
+  position: absolute;
+  right: 0;
+}
+
+.hidden {
+  width: 0;
+}
+
+.subHeader {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  color: var(--text-color-secondary);
+
+  &:first-of-type {
+    margin-top: 0.5rem;
+  }
+}

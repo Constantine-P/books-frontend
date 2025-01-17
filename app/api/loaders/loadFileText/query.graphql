@@ -1,0 +1,10 @@
+query FileText($owner: String!, $name: String!, $filePath: String!) {
+  repository(owner: $owner, name: $name) {
+    object(expression: $filePath) {
+      ... on Blob {
+        text
+      }
+    }
+  }
+}
+

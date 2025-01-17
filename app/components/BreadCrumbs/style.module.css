@@ -1,0 +1,31 @@
+.breadCrumb {
+  padding: 0;
+  background-color: transparent;
+
+  * {
+    color: var(--text-color-secondary);
+  }
+
+  :global(.p-menuitem-text) {
+    color: var(--link-color);
+  }
+}
+
+.breadCrumbLink {
+  color: var(--indigo-300);
+
+  &:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+}
+
+.homeLink {
+  span {
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
