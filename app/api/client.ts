@@ -6,11 +6,10 @@ const httpLink = createHttpLink({
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = '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';
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: `Bearer ${import.meta.env.VITE_AUTH_TOKEN}`,
     },
   };
 });
