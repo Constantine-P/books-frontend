@@ -9,7 +9,6 @@
 .readerInner {
   margin: auto;
   padding-top: 2rem;
-  /*padding-bottom: 2rem;*/
   max-width: 800px;
   flex: 1;
   display: flex;
