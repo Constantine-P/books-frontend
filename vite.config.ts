@@ -9,6 +9,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 import { fileURLToPath } from 'url';
 
 export default defineConfig({
+  base: 'https://constantine-p.github.io/books-frontend/',
   build: {
     assetsDir: '',
   },
