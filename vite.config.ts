@@ -10,7 +10,6 @@ import { fileURLToPath } from 'url';
 
 export default defineConfig({
   build: {
-    modulePreload: false,
     assetsDir: '',
   },
   css: {
