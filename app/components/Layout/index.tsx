@@ -1,20 +1,23 @@
 import { Button } from 'primereact/button';
 import { classNames } from 'primereact/utils';
-import React, { useCallback, useEffect, useLayoutEffect, useState } from 'react';
+import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Outlet, useLocation } from 'react-router';
 
 import { Header } from '@/components/Header';
 
 import { Navigation } from '@/components/Navigation';
+import { header } from '@/constants/sizes';
 import { useStore } from '@/store/useStore';
 
 import styles from './style.module.css';
 
-export default function ProjectLayout() {
+export default function Layout() {
   const {
     state: { theme, activeNode },
     methods,
   } = useStore();
+
+  const ref = useRef<HTMLDivElement>(null);
 
   const location = useLocation();
 
@@ -28,6 +31,13 @@ export default function ProjectLayout() {
     window.localStorage.setItem('navigation', isNavigationVisible ? 'visible' : '');
   }, [isNavigationVisible]);
 
+  useEffect(() => {
+    const block = ref.current;
+    if (block && block.scrollTop > header.height) {
+      block.scrollTo({ top: header.height });
+    }
+  }, [activeNode, ref.current]);
+
   const handleNavigationVisibleToggle = useCallback(() => setIsNavigationVisible((x) => !x), []);
 
   return (
@@ -36,6 +46,7 @@ export default function ProjectLayout() {
         [styles.lightTheme]: theme === 'light',
         [styles.darkTheme]: theme === 'dark',
       })}
+      ref={ref}
     >
       <div className={styles.header}>
         <Header />
